@@ -13,17 +13,17 @@ p2G = 10
 maxp2P = 45
 
 # ask user for inputs
-videoFile = raw_input('Video file: ')
-outDir = raw_input('Output directory: ')
-outFile = raw_input('Output text file name: ')
-if not os.path.exists(outDir):
-  os.makedirs(outDir)
+#videoFile = raw_input('Video file: ')
+#outDir = raw_input('Output directory: ') # 
+#outFile = raw_input('Output text file name: ')
+#if not os.path.exists(outDir):
+ # os.makedirs(outDir)
 
 # load the eye tracking video
-cap = cv2.VideoCapture(videoFile)
+cap = cv2.VideoCapture("blinking_video.mp4")
 
 # save the output values
-valFile = os.path.join(outDir,outFile)
+valFile = os.path.join(outDir,outFile)# 
 with open(valFile,'w') as f:
   f.write(' '.join(["frame","xP","yP","rP","xG","yG","rG","\n"]))
 
